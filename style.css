@@ -1,0 +1,207 @@
+html, body {
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, rgb(240, 63, 63), rgb(44, 44, 241));
+  color: whitesmoke;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+#title-bar {
+  width: 50%;
+  height: 150px;
+  background-color: #f5eded;
+  margin: -350px auto; /* Remove the negative margin-top */
+  margin-bottom: 0;
+  position: relative; /* Add position: relative */
+  transform: translateY(0); /* Add transform: translateY(0) */
+}
+
+@media screen and (max-width: 768px) {
+  #title-bar {
+    transform: translateY(50px); /* Adjust the value as needed */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #title-bar {
+    transform: translateY(100px); /* Adjust the value as needed */
+  }
+}
+.move-counter {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.heading {
+  cursor: pointer;
+  font-size: 6rem;
+}
+
+.subheading {
+  font-size: 2rem;
+}
+
+table {
+  width: 80vmin;
+  height: 80vmin;
+  padding: 3px;
+  border-radius: 10px;
+  border-spacing: 5px;
+  font-size: 2rem;
+  background-color: rgba(245, 245, 245, 0.164);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  table-layout: fixed;
+}
+
+
+
+.cell {
+  width: 25%;
+  height: 25%;
+  cursor: pointer;
+  font-size: 6rem; 
+  font-weight: bold; /* Make the text inside the cell bold */
+  overflow: hidden;
+  background-color: rgb(99, 99, 99);
+  border: 1px solid rgba(65, 65, 65, 0.616);
+  box-shadow: inset 2px 2px 3px 1px rgba(116, 116, 116, 0.5),
+              inset -2px -2px 3px 1px rgba(65, 65, 65, 0.3);
+}
+.cell span {
+  width: 100%;
+  text-align: center;
+}
+.empty-cell {
+  cursor: default;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.rainbow {
+  animation: rainbow 3s linear 0s infinite;
+}
+
+.cell:hover, .heading:hover {
+  color: white;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+path {
+  fill: whitesmoke;
+}
+
+svg:hover path {
+  fill: white;
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes rainbow {
+  0%, 100% { color: pink; }
+  15% { color: orange; }
+  30% { color: yellow; }
+  45% { color: lime; }
+  60% { color: cyan; }
+  75% { color: skyblue; }
+  90% { color: violet; }
+}
+
+#logo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
+
+button#how-to-play-button {
+  padding: 15px 30px;
+  font-size: 2rem;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#how-to-play-button:hover {
+  background-color: #1976D2;
+}
+
+button#start-game-button,
+button#reset-game-button {
+  padding: 15px 30px;
+  font-size: 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#start-game-button:hover,
+button#reset-game-button:hover {
+  background-color: #45a049;
+}
+
+.flex-item p {
+  font-weight: bold;
+  font-size: 2.5rem; /* Adjust font size as needed */
+}
+
+.instructions-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.move-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.subheading {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 2rem;
+}
+
+.volume-controls {
+  position: absolute;
+  right: 10px;
+  top: 100px; /* Adjust this value to move it slightly lower */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem; /* Increase font size */
+}
+
+.volume-controls label {
+  margin-bottom: 10px; /* Add spacing between labels and sliders */
+}
+
+.volume-controls input[type="range"] {
+  width: 200px; /* Increase width of sliders */
+  height: 25px; /* Increase height of sliders */
+  margin-bottom: 20px; /* Add spacing between sliders */
+}
+
